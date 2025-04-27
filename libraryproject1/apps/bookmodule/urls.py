@@ -46,18 +46,7 @@ urlpatterns = [
     path('lab9_part1/deletebook/<int:id>', views.deletebook, name= "delete_book"),
     path('lab9_part2/listbooks2', views.listbooks2, name="list_books2"),  
     path('lab9_part2/addbook2', views.addbook2, name= "add_book2"),   
-
-
-
-
-
-
     path('lab9_part2/editbook2/<int:id>', views.editbook2, name= "edit_book2"), 
-
-
-
-
-
     path('lab9_part2/deletebook2/<int:id>', views.deletebook2, name= "delete_book2"),    
 
 ]
