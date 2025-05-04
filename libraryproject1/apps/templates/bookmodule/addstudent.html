@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %} 
 {% load static %} 
 
-{% block title %} Edit Book Page {% endblock title %} 
+{% block title %} Add Book Page {% endblock title %} 
 
 {% block stylesheets %}
 
@@ -52,6 +52,6 @@
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Edit</button>
+    <button type="submit">Add</button>
 </form>
 {% endblock content %}
