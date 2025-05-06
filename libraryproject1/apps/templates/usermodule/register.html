@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %} 
 {% load static %} 
 
-{% block title %} Edit Profile Page {% endblock title %} 
+{% block title %} Register {% endblock title %} 
 
 {% block stylesheets %}
 
@@ -18,8 +18,8 @@
     }
 
     table {
-        width: auto;
-        margin: 1em;
+        width: 20%;
+        margin: 20px auto;
         font-size: 1em;
         font-family: Times New Roman;
         text-align: center;
@@ -49,18 +49,10 @@
 {% endblock stylesheets %}
 
 {% block content %}
-
-{% if messages %}
-    <ul>
-        {% for message in messages %}
-            <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
-
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Add</button>
+    <button type="submit">Register</button>
 </form>
+<a href="{% url 'login' %}">Already have an account? Login</a>
 {% endblock content %}

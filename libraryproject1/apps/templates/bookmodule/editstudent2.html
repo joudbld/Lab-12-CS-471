@@ -49,9 +49,18 @@
 {% endblock stylesheets %}
 
 {% block content %}
+
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Edit</button>
+    <button type="submit">Add</button>
 </form>
 {% endblock content %}
